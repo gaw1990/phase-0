@@ -5,6 +5,7 @@
 [George's Command Line Reflection](http://youtu.be/33ndeOiXdM4)
 
 ## 1.3 Version Control Reflection
+[George's Version Control Reflection](http://youtu.be/v-oqynVKmgU)
 
 ## 1.4 Forking and Cloning Reflection
 
