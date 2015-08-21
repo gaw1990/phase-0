@@ -1,6 +1,6 @@
 Welcome to George Wambold's Phase-0 Repo!!!
 
-Contact me if you have any questions!
+Feel free to contact me if you have any questions:
 
 email: georgewambold@gmail.com
 
