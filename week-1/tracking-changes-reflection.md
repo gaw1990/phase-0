@@ -1,16 +1,4 @@
-## 1.1 Think About Time Reflection
-[George's Time Management Reflection](http://youtu.be/NJhrOb40q9I) 
-
-## 1.2 The Command Line Reflection
-[George's Command Line Reflection](http://youtu.be/33ndeOiXdM4)
-
-## 1.3 Version Control Reflection
-
-## 1.4 Forking and Cloning Reflection
-
-## 1.5 Tracking Changes Reflection
-
-Tracking Changes Reflection
+## Tracking Changes Reflection
 
 - How does tracking and adding changes make developers' lives easier?
 - What is a commit?
@@ -21,5 +9,4 @@ Tracking Changes Reflection
 - What is a pull request and how do you create and merge one?
 - Why are pull requests preferred when working with teams?
 
-
-## 1.6 My Website Reflection
+<!-- Add your reflection here. Remove the comment markers -->
