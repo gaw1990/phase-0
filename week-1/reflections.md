@@ -10,9 +10,10 @@
 ## 1.4 Forking and Cloning Reflection
 
 ## 1.5 Tracking Changes Reflection
+[George's Tracking Changes Reflection](http://youtu.be/auanJjGEuSc)
 
-Tracking Changes Reflection
-
+--Tracking Changes Reflection Prompt--
+(for reference)
 - How does tracking and adding changes make developers' lives easier?
 - What is a commit?
 - What are the best practices for commit messages?
