@@ -25,8 +25,9 @@
 
 
 ## 1.6 My Website Reflection
+[George's Github.io and Open Source Reflection](http://youtu.be/sXtaaGQVrv4)
 
---Open Source and Repo Setup Reflection--
+--Open Source and Repo Setup Reflection prompt--
 
 - Explain how to create a repository on GitHub and clone the repository to your local computer to a non-technical person.
 - Describe what open source means.
