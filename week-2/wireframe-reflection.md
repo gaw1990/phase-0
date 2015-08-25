@@ -1,4 +1,4 @@
-[http://youtu.be/bBIe9mKI0Bg](#2.4 Wireframing Reflection)
+[http://youtu.be/bBIe9mKI0Bg](2.4 Wireframing Reflection)
 
 ##My Homepage wireframe! 
 ![homepage-wireframe](wireframe-index.png)
