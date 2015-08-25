@@ -1,6 +1,7 @@
-![homepage-wireframe](wireframe-index.png)
 ##My Homepage wireframe! 
+![homepage-wireframe](wireframe-index.png)
 
-![blog-wireframe](wireframe-blog-index.png)
+
 ##My blog wireframe!
-####(really pushing boundaries with this one, I know.)
+![blog-wireframe](wireframe-blog-index.png)
+(really pushing boundaries with this one, I know.)
