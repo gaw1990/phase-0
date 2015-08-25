@@ -2,7 +2,7 @@
 
 [Reflection 2.3](http://youtu.be/mKe6tYPwnNM)
 
-## Intro to Design and Site Planning Reflection Prompt
+## --Intro to Design and Site Planning Reflection Prompt--
 
 What are the 6 Phases of Web Design?
 
