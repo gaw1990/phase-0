@@ -1,4 +1,5 @@
-[http://youtu.be/bBIe9mKI0Bg](2.4 Wireframing Reflection)
+##2.4 Wireframing Reflection
+[George's Wireframing Reflection](http://youtu.be/bBIe9mKI0Bg)
 
 ##My Homepage wireframe! 
 ![homepage-wireframe](wireframe-index.png)
