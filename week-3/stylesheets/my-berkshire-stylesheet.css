@@ -98,3 +98,32 @@ footer span {
 h6 {
 	font-weight: normal;
 }
+
+/*
+
+-What is important to know when linking an external file (like a stylesheet) to an HTML file?
+	It's important to know the path to the stylesheet relative to the HTML file. It's also
+important to know the file's name. 
+
+-What tricks did you use to help you with positioning? How hard was it to get the site as you 
+wanted it?
+	I wouldn't say we used any tricks, but we used -float-, -padding- and -line-height- to get our 
+text and links where we wanted them. It definitely took us a solid chunk of time to get the
+elements to line up correctly. We had problems with the two coloumns of links and the borders/text
+at the bottom of the page.
+
+-What CSS did you use to modify the element style (like size, color, etc.) Did you modify 
+the HTML to include classes or ids? If so, which did you chose and why? 
+	We used -font-height-, -font-weight-, -color-. We used a lot of classes to define our 
+elements because we had <p>, <a>, <div> and <span> elements we needed to specifically target. 
+
+-If you didn't, how would you know which one to add to your HTML?
+	You can only use <id=> once and you can use <class=> to define as many elements as you want.
+Someone somewhere told me it's a best practice to only use class so that's what we did.
+
+-When you compared your site to the actual code base, which do you think had cleaner code that 
+followed best practices and why?
+	To give Irina and myself a nice pat on the back-- I think our site had cleaner code! We 
+defined more in CSS than in HTML and our use of EM over PX would make our site scale better.
+*/
+
