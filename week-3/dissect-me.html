@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Julian + George BEST BLOG EVER (GPS1.2)</title>
+</head>
+<body>
+
+
+
+	<article>
+		<h2>Git Steps</h2>
+		<ol>
+			<li>phase0 :> git clone https://github.com/[username]/phase-0.git <b>#clone remote repo to local machine</b>
+			</li>
+			<li>week-1 [master] :> git pull <b>#pull branch from remote to local master to update local repo (you don't need to do this if you have a fresh clone)</b>
+			</li>
+			<li>week-1 [master] :> git checkout -b new-branch <b>#create a new branch and switch to it</b>
+			</li>
+			<li>
+				week-1 [new-branch] :> git status <b>#check status of the new branch</b>
+			</li>
+			<li>
+				week-1 [new-branch] :> git add . <b>#add changes to staging area</b>
+			</li>
+			<li>week-1 [new-branch] :> git commit -m "add random change" <b>#commit branch</b></li>
+			<li>week-1 [new-branch] :> git push -u origin new-branch <b>#tell git hub about branch and push it up in current state, now a pull request can be submitted with this branch on github, and may be deleted after merging, both remotely and locally.</b></li>
+			<li><b> go to Github, make a pull request, and merge branch, then delete old branch</b></li>
+			<li>week-1 [new-branch] :> git checkout master <b>#go to master branch</b>
+			</li>
+			<li>week-1 [master] :> git pull <b>#update local master branch from github after making any changes to github</b></li>
+			<li>week-1 [master] :> git branch -d new-branch <b>#delete branch locally.</b></li>
+		</ol>
+	</article>
+
+
+	<article>
+		<h2>--Version Control--</h2>
+
+		<p>When developers work on collaborative projects, it’s a challenge to keep everyone up to date with each other’s edits and saves while maintaining one bug-free and usable version. To manage these issues we use “Version Control” systems.</p>
+
+		<p>Version control could be as simple as a college student classifying an essay as “first draft”, making edits in the margins and revising a “working draft” then polishing it up and submitting a “final draft”. The basic advantages of version control remain:</p>
+
+		<p>1. an accessible history of edits and saves
+		</p>  
+
+		<p>2. versions that can be reverted to (if new edits don’t work)</p>
+
+		<p>Let’s say now the next assignment is one essay to be worked on by the entire class, with separate groups working on grammar, vocabulary, formatting, and research— That’s sort of like working on a piece of software and it can get complicated.</p>
+
+		<p>To handle these large collaborative projects, developers use systems like git and GitHub to understand the who, when and why of edits as well as keeping a central, up to date version of the project.</p>
+	</article>
+
+
+
+
+</body>
+</html>
