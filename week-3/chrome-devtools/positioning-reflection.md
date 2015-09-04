@@ -1,12 +1,39 @@
-![1. Change Color](imgs/1-Change-Color.png)
+1. Change Color
+![1. Change Color](imgs/1-Change-color.png)
+
+
+2. Columns
 ![2. Columns](imgs/2-Column.png)
+
+
+3. Rows
 ![3. Rows](imgs/3-Row.png)
+
+
+4. Make Equidistant
 ![4. Make Equidistant](imgs/4-Make-Equidistant.png)
+
+
+5. Squares
 ![5. Squares](imgs/5-Squares.png)
+
+
+6. Footer
 ![6. Footer](imgs/6-Footer.png)
+
+
+7. Header
 ![7. Header](imgs/7-Header.png)
+
+
+8. Sidebar
 ![8. Sidebar](imgs/8-Sidebar.png)
+
+
+9. Creativity (yay!)
 ![9. Creativity (yay!)](imgs/9-Creativity.png)
+
+
 
 ###3.4 Reflection
 -How can you use Chrome's DevTools inspector to help you format or position elements?
