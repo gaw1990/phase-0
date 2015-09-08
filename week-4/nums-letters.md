@@ -13,11 +13,11 @@ Integer division doesn't use decimals, it seems strange at first, but it's actua
 ###Release 2:
 Here's some fun Ruby:
 
-'''
-    puts 24 * 365 # hours in a year
-    puts 60 * 24 * 365 * 10 # minutes in a decade
-    puts 60 * 60 * 24 * 365 * 25 + 60 * 60 * 24 * 7 # my age in seconds
-'''
+```
+puts 24 * 365 # hours in a year
+puts 60 * 24 * 365 * 10 # minutes in a decade
+puts 60 * 60 * 24 * 365 * 25 + 60 * 60 * 24 * 7 # my age in seconds
+```
 
 ###Release 5(Excercises):
 [4.2.1 Defining Variables](https://github.com/gaw1990/phase-0/blob/master/week-4/defining-variables.rb)
