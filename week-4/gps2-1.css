@@ -1,0 +1,26 @@
+
+header {
+	background-color: red;
+	font-style: italic;
+}
+
+.column-1 {
+	float: left;
+	max-width: 50%;
+	background-color: blue;
+	font-family: Arial;
+}
+
+
+.column-2 {
+	float: right;
+	max-width: 50%;
+	background-color: yellow;
+	color: orange;
+}
+
+footer {
+	background-color: green;
+	clear: both;
+	font-weight: bold;
+}
