@@ -12,5 +12,8 @@
 
 #Your Solution Below
 def shortest_string(list_of_words)
-  # Your code goes here!
+sorted_list = list_of_words.sort { |a, b| a.length <=> b.length } 
+p sorted_list[0]
 end
+
+
