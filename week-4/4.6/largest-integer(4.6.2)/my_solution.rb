@@ -12,5 +12,5 @@
 
 # Your Solution Below
 def largest_integer(list_of_nums)
-  # Your code goes here!
+  p list_of_nums.sort.reverse[0]
 end
