@@ -11,10 +11,8 @@ def factorial(n)
 	elsif n == 1
 		return 1
 	else
-		result=1	
+		result=1
 	n.downto(1) { |n| result *= n}
-	return results
+	return result
+	end
 end
-end
-
-puts factorial(5)
