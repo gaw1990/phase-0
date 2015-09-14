@@ -15,5 +15,13 @@
 # Your Solution Below
 
 def count_between(list_of_integers, lower_bound, upper_bound)
-  # Your code goes here!
+  if list_of_integers.empty? == true
+  	return 0
+  elsif lower_bound > upper_bound
+  	return 0
+  else
+  	list_of_integers.count { |x| 
+  		 lower_bound <= x && x <= upper_bound
+  	}
+  end
 end
