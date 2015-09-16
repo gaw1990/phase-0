@@ -246,5 +246,34 @@ end #def
 # 4. x / 5 - 3 == 0
 # 5. x / 5 - 4 == 0
 
-#################################################
+####################################REFLECTION########################################################
+=begin 
 
+1. What was the most interesting and most difficult part of this challenge?
+Slicing and managing my arrays through the workflow proved to be a challenge. It was hard to 
+find the right commands and syntax, but once I had that I implimented it in my code well. 
+
+
+2. Do you feel you are improving in your ability to write pseudocode and break the problem down?
+This was the first challenge where I really followed the guidelines for pseudocode and refactoring.
+After my GPS on Monday, I've 'seen the light' of pseudocoding. It lets you flush your thoughts out 
+without committing yourself to any serious research or writing. 
+
+
+3. Was your approach for automating this task a good solution? What could have made it even better?
+I think my approach is awesome! It takes care of any size list and prioritizes 4 and 5 person groups
+over 3 person groups. Though the code could probably have been more efficient, I'm extremely proud
+of this solution.
+
+
+4. What data structure did you decide to store the accountability groups in and why?
+Arrays. You can move them in and out of methods, so they were really the only choice. I defined
+subarrays for each seperate group within a main array and eventually just iterated over the main
+array to spit out groups. 
+
+
+5. What did you learn in the process of refactoring your initial solution? Did you learn any new Ruby methods?
+I didn't learn anything new, but I got a lot more comfortable with using methods for everything. Even tiny
+single lines of code-- It's just more readable to have a method instead. 
+
+=end
