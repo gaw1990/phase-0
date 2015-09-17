@@ -86,7 +86,7 @@ def die_argument_error
    		raise ArgumentError.new
 
    	end
-   	
+
  end
 
 ##############################################################
@@ -103,8 +103,43 @@ def side_array_generator
 
 end
 
-#################################################################################################
-# 4. Reflection
 
+=begin
+#########################################REFLECTION###############################################
+
+1. What is an ArgumentError and why would you use one?
+An ArgumentError is an error that is raised when there are an invalid amount or type of argument
+being passed to a method. We raise an error in this case because our methods COULD take 0 as an 
+arguement and be valid, but we DON'T WANT them to. A real die can't have 0 sides, so we're trying
+to simulate that. 
+
+
+2. What new Ruby methods did you implement? What challenges and successes did you have in implementing them?
+I learned two new methods or commands 'raise' and '*'(splat). I looked through a lot more, but 
+because I knew it better I ended up just using '.shuffle!' instead of using one of the RNG 
+methods the assignment reccomended. 
+
+
+3. What is a Ruby class?
+A ruby class is a kind of object that takes arguments to define built in variables. It also has built in
+methods that you can call. 
+
+
+4. Why would you use a Ruby class?
+
+
+
+5. What is the difference between a local variable and an instance variable?
+
+
+
+6. Where can an instance variable be used?
+
+
+
+
+
+
+=end
 
 
