@@ -38,47 +38,39 @@ class Die
   end
 
   def sides
-    p @no_of_sides
+    return @no_of_sides
   end
 
   def roll
   	side_array = [*1..@no_of_sides]
   	side_array.shuffle!
-  	p side_array[0]
+  	return side_array[0]
   end #def roll
 end #class
 
-dice = Die.new(5)
-
-p dice.sides
-
-
-p dice.roll
 
 ###################################################################################################
 # 3. Refactored Solution
 class Die
 
   def initialize(sides)
-	@no_of_sides = sides
+	  @no_of_sides = sides
 
-	die_argument_error   
+	  die_argument_error   
 
   end
 
   def sides
-    print_number_of_sides
+    return_number_of_sides
 
   end
 
   def roll
-  	side_array = side_array_generator
-  	side_array.shuffle!
-  	p side_array[0]
+    return_shuffled_side
 
   end
 
-end 
+end #class
 
 ###################################################################################################
 def die_argument_error
@@ -91,8 +83,8 @@ def die_argument_error
 
 ##############################################################
 
-def print_number_of_sides
-	p @no_of_sides
+def return_number_of_sides
+	return @no_of_sides
 
 end
 
@@ -102,6 +94,15 @@ def side_array_generator
 	[*1..@no_of_sides]
 
 end
+
+##############################################################
+
+def return_shuffled_side
+  side_array = side_array_generator
+  side_array.shuffle!
+  return side_array[0]
+end
+
 
 
 =begin
@@ -121,20 +122,28 @@ methods the assignment reccomended.
 
 
 3. What is a Ruby class?
-A ruby class is a kind of object that takes arguments to define built in variables. It also has built in
-methods that you can call. 
+A ruby class is a kind of object that takes arguments to define built in variables. It can also have built in
+methods that can be called by class.method. 
 
 
 4. Why would you use a Ruby class?
-
+I'd imagine that when we're working with big peices of code, we'll often be recycling segments of code
+or using the same methods over and over. It's simpler and more efficient to store code in classes and 
+then call it again and again. It seems more efficient that way.
 
 
 5. What is the difference between a local variable and an instance variable?
+Instance variables exist in a class and are defined for each instance of that class. For example 
+for the Starbucks_order class, you could have an @size instance variable and for one instance it 
+could == 'grande' and for another it could be 'venti'. 
 
+Local variables are just called by their name, no '@' symbol before the name. Also (i had to look this up)
+they do not give a default value of nil when called. For example if you call #chinook #=> nil, but if you 
+call 'chinook' #=> error. 
 
 
 6. Where can an instance variable be used?
-
+In a class! I think that's the only place they can be used.
 
 
 
