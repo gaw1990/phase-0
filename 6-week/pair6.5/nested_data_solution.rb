@@ -78,14 +78,23 @@ startup_names = ["bit", ["find", "fast", ["optimize", "scope"]]]
 =begin
   
 What are some general rules you can apply to nested arrays?
-
+They're an excellent way to store three dimensional data sets. I'm not
+sure exactly what this question is asking. I guess you could say they're
+all nested arrays are arrays. All nested arrays are accessable by index.
 
 What are some ways you can iterate over nested arrays?
-
+You can use the same methods you use to iterate over non-nested array like
+.map, .each, .select, .collect. You can tell ruby to iterate and dig into a 
+deeper array if the object it iterates over is an array, not an simple ojbect.
 
 Did you find any good new methods to implement or did you re-use one you 
 were already familiar with? What was it and why did you decide that was 
 a good option?
+We used .fetch for the first time and it was definitely a good option. 
+Partially because it's so easy to understand and also becuase it returns
+an error instead of nil when it's aimed at an empty array index. We used 
+.map a bunch in 5.4 so it wasn't new, but it worked well for this challenge.
+It gave us a destructive iteration tool. 
 
 
   
