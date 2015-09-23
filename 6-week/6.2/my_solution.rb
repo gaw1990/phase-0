@@ -109,13 +109,18 @@ end
 # Reflection
 =begin
 
--What were the main differences between this die class and the last one you created in terms of implementation? Did you need to change much logic to get this to work?
+-What were the main differences between this die class and the last one you 
+created in terms of implementation? Did you need to change much logic to get 
+this to work?
 
-It was pretty much the same exact thing, I didn't have to change any logic. I just used the method rand instead of shuffle for my RNG. 
+It was pretty much the same exact thing, I didn't have to change any logic. I 
+just used the method rand instead of shuffle for my RNG. 
 
--What does this exercise teach you about making code that is easily changeable or modifiable? 
+-What does this exercise teach you about making code that is easily changeable 
+or modifiable? 
 
-It shows me that there is a  basic "dice" class that can be slighly modified to take on a lot of different dice situations. 
+It shows me that there is a  basic "dice" class that can be slighly modified to 
+take on a lot of different dice situations. 
 
 -What new methods did you learn when working on this challenge, if any?
 
@@ -123,6 +128,9 @@ It shows me that there is a  basic "dice" class that can be slighly modified to 
 
 -What concepts about classes were you able to solidify in this challenge?
 
-This challenge was very familiar, so I took the opportunity to focus on my pseudocode. I tried to make it as readable as possible and specific without using Ruby terms. Also I guess I now know that instance variables are the @variable ones. 
+This challenge was very familiar, so I took the opportunity to focus on my 
+pseudocode. I tried to make it as readable as possible and specific without 
+using Ruby terms. Also I guess I now know that instance variables are the 
+@variable ones. 
 
 =end
