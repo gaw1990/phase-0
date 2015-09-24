@@ -1,8 +1,8 @@
 # Class Warfare, Validate a Credit Card Number
 
 
-# I worked on this challenge [by myself, with: ].
-# I spent [#] hours on this challenge.
+# I worked on this challenge [by myself, with: Rosslyn Sinclair-Chin].
+# I spent [2 glorious] hours on this challenge.
 
 # Pseudocode
 
