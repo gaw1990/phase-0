@@ -22,63 +22,91 @@ Differences: JS uses a weird '==' to compare objects as well as '==='. The diffe
 
 -What is an expression?
 
-
-
+It's a segment of code that produces a value.
 
 -What is the purpose of semicolons in JavaScript? Are they always required?
 
-
-
+They tell the code when it's reached the end of a statement. They're not 
+always required, but when they're not required was mentioned, but not discussed.
 
 -What causes a variable to return undefined?
 
-
-
+If the variable has an empty value, and you ask it to return it's value, it 
+will return undefined.
 
 -Write your own variable and do something to it in the eloquent.js file.
 
-
-
+Done.
 
 -What does console.log do and when would you use it? What Ruby method(s) is this similar to?
 
-
-
+It print information to the console. It's similar to print, puts and p. 
 
 -Write a short program that asks for a user to input their favorite food. After they hit return, have the program respond with "Hey! That's my favorite too!" (You will probably need to run this in the Chrome console (Links to an external site.) rather than node since node does not support prompt or alert). Paste your program into the eloquent.js file.
 
-
-
+prompt("What's your favorite food?")
+alert("Hey! That's my favorite too!")
 
 -Describe while and for loops
 
-
-
+While loops continue to excecute a block of code while something remains true 
+or false. For loops define the values it wants passed through a block of code
+and then excecutes the block for those values.
 
 -What other similarities or differences between Ruby and JavaScript did you notice in this section?
 
-
-
+Variables act almost exactly the same way in both languages. So do conditional
+statements, for and while loops and the flow control seems pretty similar. 
 
 -Complete at least one of the exercises (Looping a Triangle, FizzBuzz, of Chess Board) in the eloquent.js file.
 
 
 
 
-Ch. 3: Functions (Links to an external site.) (Skip the sections on closure and recursion)
-What are the differences between local and global variables in JavaScript?
-When should you use functions?
-What is a function declaration?
-Complete the minimum exercise in the eloquent.js file.
+# Ch. 3: Functions 
 
+-What are the differences between local and global variables in JavaScript?
 
+Local variables: Created and defined for every time a function is called. They
+can't be called from outside the function. 
 
-Ch. 4: Data Structures: Objects and Arrays (Links to an external site.) 
+Global Variables: Created and defined outside of a specific funtion, they can
+be called and redefined anywhere in the code. 
+
+-When should you use functions?
+
+When you have a block of code that you'll use more than once. 
+
+-What is a function declaration?
+
+It's when you tell the computer you're making a function, it's name and it's 
+block of code. 
+
+-Complete the minimum exercise in the eloquent.js file.
+
+Done.
+
+# Ch. 4: Data Structures: Objects and Arrays
+
 Skip the sections on the Lycanthrope's log, Computing Correlations, and sections from Further Arrayology to the Global Object, but read the chapter summary.
-What is the difference between using a dot and a bracket to look up a property? Ex. array.max vs array["max"]
-Create an object called me that stores your name, age, three favorite foods, and a quirk in your eloquent.js file.
-What is a JavaScript object with a name and value property similar to in Ruby?
-Now you should be ready to face the next challenges!
 
-If you want to continue reading this book, feel free. You can even work through the exercises, but this is the end of what you will need for this week. Work to get a basic understanding of JavaScript fundamentals before you dive deeper.
+-What is the difference between using a dot and a bracket to look up a property? Ex. array.max vs array["max"]
+
+Value.x will fetch the property of the value named 'x'. Value[x] tries to 
+evaluate the value of 'x' and use that as the property's value.
+
+-Create an object called me that stores your name, age, three favorite foods, and a quirk in your eloquent.js file.
+
+Done.
+
+-What is a JavaScript object with a name and value property similar to in Ruby?
+
+It's similar to a Ruby variable? This question is confusing.
+
+
+
+
+
+
+
 
