@@ -148,15 +148,41 @@ end
 all_states
 
 
-
+=begin
 #=======================================================================
-# Reflection Section
+ Reflection Section
+
+-What are the differences between the two different hash syntaxes shown in the state_data file?
+
+One is the older key => value pair set, which sets the hash values using the 
+rocket operator (=>). The other is the key: value pair assigner. Which uses 
+a symbol then it's value to assign. The symbol way seems to be simpler if 
+nothing else, so I would probably go with that. Symbols are also easy to call
+later. 
+
+-What does require_relative do? How is it different from require?
+
+Require takes a file and load it's variables, functions, classes ect into the
+file that calls require. require_relative loads a file relative to the file
+require_relative is called in (eg. calling state_data and not 
+../../../state_data).
+
+-What are some ways to iterate through a hash?
+
+You can use .each, .each_key, .each_value. They all work depending on what 
+you're trying to do. In this situation we used .each_key, but that was 
+refactored from each (key, value) then just calling value in the code.
+
+-When refactoring virus_effects, what stood out to you about the variables, if anything?
+
+It turned out that the methods in virus_effects didn't need to take any 
+arguments because the methods called @local_variables that were already defined.
+
+-What concept did you most solidify in this challenge?
+
+Require/require_relative. I think that was something I'd been making 
+assumptions about ever since we started rspecing and I'm happy to get to 
+the bottom of it.
 
 
-
-
-
-
-
-
-
+=end
