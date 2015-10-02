@@ -86,7 +86,7 @@ console.log(separateComma(1234567123412348))
 //
 // -What built-in methods did you find to incorporate in your refactored solution?
 //
-//
+// Splice! It's awesome.
 //
 //
 //
