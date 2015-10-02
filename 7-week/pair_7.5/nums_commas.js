@@ -13,47 +13,80 @@
 
 // Initial Solution
 
-function separateComma(integer) {
-      var string = integer + '';  
-      string.split("").reverse()
-      
-      var new_array = [];
-  
-      for (var i = 0; i < string.length; i + 3) { 
-//        var indexOne = 0;
-//        var indexTwo = 3;
-          new_array.push(var string_array.slice(i,i + 3));
-//        indexOne += 3;
-//        indexTwo += 3;
-};
-      
-//       string_with_commas.join("").reverse();
-}
+// function separateComma(integer) {
 
-(separateComma(1569743))
+//     var string = integer + '';  
+//     var tempArray = [];
 
+//     for (i=0; i < string.length; i+=3) {
+//     	tempArray.push(string.split("").reverse().slice(i, i+3).join(""))
+//       	};
 
-    
-
-    
-    
-    
-// new_array = []
-// new_array.push(string.slice(0, 3))
-//
-//
-
-    
-    
+//    var commaNum = tempArray.join(",").split("").reverse().join("");
+   
+//    return commaNum
+// };
 
 // Refactored Solution
 
+// function separateComma(integer) {
+
+// 	var tempArray = (integer + '').split("").reverse();
+
+// 	for (i=3; i < tempArray.length; i+=3) {
+// 	var separateComma = tempArray.splice(i, 0, ",");
+// 	i += 1
+// 	};
+
+// 	return tempArray.reverse().join("")
+
+// }
+
+// console.log(separateComma(1234567123412348))
 
 
+// REFACTOR 2
+function separateComma(integer) {
+
+	var tempArray = (integer + '').split("");
+
+	for (i=3; i < tempArray.length; i+=4) {
+	var separateComma = tempArray.splice(-i, 0, ",");
+	};
+
+	return tempArray.join("")
+
+}
+
+console.log(separateComma(1234567123412348))
 
 // Your Own Tests (OPTIONAL)
 
 
 
 
-// Reflection
+//    # Reflection
+
+// -What was it like to approach the problem from the perspective of 
+//  JavaScript? Did you approach the problem differently?
+//
+// I approached this challenge with a ruby mindset. I basically thought out
+// the solution in Ruby, then translated it to JS. That's not inheirantly bad
+// though. I'm still learning a lot about syntax in JS and JS methods.
+//
+// -What did you learn about iterating over arrays in JavaScript?
+//
+// I learned how to structure the arguements in a for loop. That took me a 
+// while, but now it's clear as day to me. It's actually pretty useful, dare I
+// say I like JS for loops more than their Ruby equivelent?
+//
+// -What was different about solving this problem in JavaScript?
+//
+// Syntax, using brackets, the for loops. Return. That's about it. 
+//
+// -What built-in methods did you find to incorporate in your refactored solution?
+//
+//
+//
+//
+//
