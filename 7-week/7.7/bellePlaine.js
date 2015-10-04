@@ -117,7 +117,7 @@
 	// hero stats (tested)
 
 // var hero = {
-// name: "hero",
+// name: "george",
 
 // health: 100,
 // maxHealth: 100,
@@ -129,6 +129,7 @@
 	// NPC Neighbor stats (tested)
 
 // var neighbor = {
+// name: "Mike",
 // health: 85,
 // maxHealth: 85
 // };
@@ -141,31 +142,36 @@
 // };
 
 	// Random Number Generator (tested)
-	
+
 // function randomNum(min, max) { 
 // 	return Math.floor(Math.random() * (max - min + 1)) + min
 // }
 
  	// fight function
-// function fight(player, NPC) {
+function fight(player, NPC) {
 
-// 	console.log("It's on!! Quick, make the first move!!")
+	console.log("It's on!! Quick, make the first move!!")
 
-// 	while (player.health !== 0 && NPC.health !== 0) {
-// 		var move = prompt("Type 'attack' to attack, 'rest' to restore 4 energy and 25hp").toUpperCase();
+	while (player.health !== 0 && NPC.health !== 0) {
+		console.log("Current stats:")
+		console.log(player.name + " health-> " + player.health + "/" + player.maxHealth)
+		console.log(player.name + " energy-> " + player.energy + "/" + player.maxEnergy)
+		console.log(NPC.name + " health-> " + NPC.health + "/" + NPC.maxHealth)
 
-// 		if(move === "ATTACK") {
+		var move = prompt("Type 'attack' to attack or 'rest' to restore 4 energy and 25hp").toUpperCase();
 
-// 		} //if
+		if(move === "ATTACK") {
+			randomNum(15)
+		} //if
 
-// 		else if(move === "REST"){
+		else if(move === "REST"){
 
-// 		} // else if
+		} // else if
 
 
-// } // while ln 146
+} // while ln 146
 
-// } // function ln145
+} // function ln145
 
 // 2.1: turns
 // 		-Attack
@@ -178,8 +184,6 @@
 //			restore 4 energy
 //			no damage done
 //			next attack deals attack/2 damage to you
-// 
-//
 
 
 
