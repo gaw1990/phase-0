@@ -1,0 +1,196 @@
+<!Doctype html>
+<html>
+<head>
+<script type="text/javascript" src="belleplaine.js"></script>
+</head>
+<body>
+<script> 
+var name = prompt("what's your name?")
+var start = alert("Ok, " + name + " let's play 'Belle Plaine'!!")
+
+
+	// hero stats (tested)
+
+var hero = {
+name: "george",
+
+health: 100,
+maxHealth: 100,
+
+energy: 8,
+maxEnergy: 10
+}; //119
+
+
+	// NPC Neighbor stats (tested)
+
+var neighbor = {
+name: "upstairs neighbor",
+
+health: 85,
+maxHealth: 85
+}; // 131
+
+
+	// delay function (tested)
+
+function delay(ms) {
+   ms += new Date().getTime();
+   console.log("...")
+   while (new Date() < ms);
+};
+
+
+	// RNG function (tested)
+
+function randomNum(min, max) { 
+	return Math.floor(Math.random() * (max - min + 1)) + min
+};
+
+ 	// fight function
+
+function fight(player, NPC) {
+
+	console.log("It's on!! Quick, make the first move!!");
+
+	var ready = alert("The fight is about to begin, hit 'ok' when you're ready")
+
+	while (player.health !== 0 && NPC.health !== 0) {
+		stats()
+		delay(5000)
+		if(player.health <= 0) {break;}
+		turn()
+		stats()
+		delay(5000)
+		if(NPC.health <= 0) {break;}
+		turnNPC()
+		delay(5000)
+
+		function stats() {
+			console.log("Current stats:");
+			console.log(player.name + " health-> " + player.health + "/" + player.maxHealth);
+			console.log(player.name + " energy-> " + player.energy + "/" + player.maxEnergy);
+			console.log(NPC.name + " health-> " + NPC.health + "/" + NPC.maxHealth);
+		} //stats
+
+
+		function turn() {
+		 	var move = prompt("Your move!! Type 'attack' to attack or 'rest' to restore 4 energy and 25hp").toUpperCase();
+	
+			if(move === "ATTACK") {
+				var damage = randomNum(15, 35) + (player.energy * 2);
+				console.log("You hit " + NPC.name + " for " + damage + "!!");
+				NPC.health = NPC.health - damage;
+			} //if
+
+			else if(move === "REST"){
+				player.energy = player.energy + 4;
+				player.health = player.health + 25;
+				console.log("You gain 4 energy and 25 health, but deal no damage!!")
+			} // else if
+
+			else {
+				alert("Please input a valid command")
+				turn()
+			} //else
+		} //turn
+
+		function turnNPC() {
+			if(NPC.health <= 30) {
+				console.log(NPC.name + " used REST!! They restored 25 health")
+				NPC.health = NPC.health + 25
+				delay(3000)
+			} // if 
+
+			else {
+				var damageNPC = randomNum(15, 35) + (player.energy * 2);
+				console.log(NPC.name + " used attack!! He hits" + player.name + " for " + damageNPC + "!!");
+				player.health = player.health - damageNPC;
+			} //else
+
+		} //function ln 194
+	} // while ln 146
+
+} // function ln145
+
+
+
+
+
+
+//				# Chapter 1-- The Apartment
+
+console.log("It's 8:30am on a sunny, beautiful Thursday morning in North Center, Chicago")
+console.log("Bees are buzzing, children are playing and birds are chirping")
+console.log("..Hmm, actually these birds sound kind of funny-- Like they're almost beeping")
+console.log("beeeep, beeeep, beeeep")
+console.log("Wait.. Those aren't birds.... It's your alarm clock!!")
+console.log("After a long night of DBC work, you're still exausted!!") 
+alarm()
+	
+	// alarm function (tested)
+function alarm(){
+	console.log("Your energy is at a " + hero.energy + " out of " + hero.maxEnergy)
+	snoozeResponse = prompt("Type 'snooze' to sleep another half hour and gain back 2 energy or type 'off' to turn off the alarm and get up").toUpperCase();
+	switch(snoozeResponse) {
+		case 'SNOOZE':
+			console.log("You slam your alarm (hoping you hit the snooze button) and drift back off to sleep");
+			console.log("zzzzzzz");
+			console.log("zzzzzzz");
+			console.log("zzzzzzz");
+			hero.energy = hero.energy + 2;
+			console.log("you gain +2 energy!!")
+			console.log("BEEEEP BEEEEP BEEEEP... Damn that's loud, ok now it's 9am and your energy is " + hero.energy + " out of " + hero.maxEnergy);
+	
+			if(hero.energy === hero.maxEnergy) {
+				console.log("You feel fully energized. It's time to get up!!")
+				break;
+			} //if
+
+			else if(hero.energy < hero.maxEnergy) {
+				alarm()
+			} // else if
+
+			else {
+				hero.energy = hero.maxEnergy
+				console.log("You feel fully energized. It's time to get up!!")
+				break;
+			}; //else
+
+		case 'OFF':
+		break;
+		
+	} //switch
+} //function alarm
+
+console.log("You clean up, start cooking breakfast just like every morning when suddenly you realize..")
+console.log("IT'S OCTOBER 1st!!!!! THE RENT'S DUE")
+console.log("you were so busy thinking about crypto-anarchy articles from the 90s that you forgot rent was due today!!!!")
+console.log("You grab your rent check and your hoodie and run out the door")
+console.log("suddenly you hear 'Hey.. Where do you think YOU'RE going??")
+console.log("..it's your shitty upstairs neighbor..")
+console.log("'It's a weeknight and we're having a bunch of random people over later... Around 1am....'")
+console.log("'I'm going to need that rent money to buy booze, illicit drugs and new bass speakers for the party'")
+console.log("'Hand over the cash or I'll kick you ass!!")
+
+var neighbor_switch = prompt("Type 'fight' to take him on, type 'give up' to give him your rent money and run away").toUpperCase();
+
+switch (neighbor_switch)	 
+	case 'GIVE UP':
+		console.log("You hand over the cash.. That's the last of it, looks like you'll be out on the street by next week");
+		alert("GAME OVER");
+		break;
+	case 'FIGHT'
+		fight(hero, neighbor);
+		break;
+
+console.log("You bound out on to the street victorious. The fresh air and sun restore your health to 100/100")
+
+
+
+</script>
+
+
+</body>
+</html>
+

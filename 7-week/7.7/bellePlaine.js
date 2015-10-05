@@ -111,14 +111,13 @@
 
 //  		##### Initial solution #####
 
-// var name = prompt("what's your name?")
-// var start = alert("Ok, " + name + " let's play 'Belle Plaine'!!")
-
+var name = prompt("what's your name?")
+alert("Ok, " + name + " let's play 'Belle Plaine'!!")
 
 	// hero stats (tested)
 
 var hero = {
-name: "george",
+name: name,
 
 health: 100,
 maxHealth: 100,
@@ -163,14 +162,14 @@ function fight(player, NPC) {
 
 	while (player.health !== 0 && NPC.health !== 0) {
 		stats()
-		delay(5000)
+		delay(3000)
 		if(player.health <= 0) {break;}
 		turn()
 		stats()
-		delay(5000)
+		delay(3000)
 		if(NPC.health <= 0) {break;}
 		turnNPC()
-		delay(5000)
+		delay(3000)
 
 		function stats() {
 			console.log("Current stats:");
@@ -196,7 +195,7 @@ function fight(player, NPC) {
 			} // else if
 
 			else {
-				// alert("Please input a valid command")
+				alert("Please input a valid command")
 				turn()
 			} //else
 		} //turn
@@ -226,30 +225,44 @@ function fight(player, NPC) {
 
 //				# Chapter 1-- The Apartment
 
-console.log("It's 8:30am on a sunny, beautiful Thursday morning in North Center, Chicago")
-console.log("Bees are buzzing, children are playing and birds are chirping")
-console.log("..Hmm, actually these birds sound kind of funny-- Like they're almost beeping")
-console.log("beeeep, beeeep, beeeep")
-console.log("Wait.. Those aren't birds.... It's your alarm clock!!")
-console.log("After a long night of DBC work, you're still exausted!!") 
-// alarm()
+console.log("It's 8:30am on a sunny, beautiful Thursday morning in North Center, Chicago");
+delay(3000);
+console.log("Bees are buzzing, children are playing and birds are chirping");
+delay(2500);
+console.log("..Hmm, actually these birds sound kind of funny-- Like they're almost beeping");
+delay(3000);
+console.log("beeeep, beeeep, beeeep");
+delay(2000);
+console.log("Wait.. Those aren't birds.... It's your alarm clock!!");
+delay(2500);
+console.log("After a long night of DBC work, you're still exausted!!"); 
+delay(2500);
+alarm();
 	
 	// alarm function (tested)
 function alarm(){
 	console.log("Your energy is at a " + hero.energy + " out of " + hero.maxEnergy)
+	delay(2000);
 	snoozeResponse = prompt("Type 'snooze' to sleep another half hour and gain back 2 energy or type 'off' to turn off the alarm and get up").toUpperCase();
 	switch(snoozeResponse) {
 		case 'SNOOZE':
 			console.log("You slam your alarm (hoping you hit the snooze button) and drift back off to sleep");
+			delay(3000);
 			console.log("zzzzzzz");
+			delay(1000);
 			console.log("zzzzzzz");
+			delay(1000);
 			console.log("zzzzzzz");
+			delay(1000);
 			hero.energy = hero.energy + 2;
 			console.log("you gain +2 energy!!")
+			delay(1000);
 			console.log("BEEEEP BEEEEP BEEEEP... Damn that's loud, ok now it's 9am and your energy is " + hero.energy + " out of " + hero.maxEnergy);
+			delay(3000);
 	
 			if(hero.energy === hero.maxEnergy) {
 				console.log("You feel fully energized. It's time to get up!!")
+				delay(2000);
 				break;
 			} //if
 
@@ -260,6 +273,7 @@ function alarm(){
 			else {
 				hero.energy = hero.maxEnergy
 				console.log("You feel fully energized. It's time to get up!!")
+				delay(1000);
 				break;
 			}; //else
 
@@ -268,28 +282,37 @@ function alarm(){
 		
 	} //switch
 } //function alarm
-
-console.log("You clean up, start cooking breakfast just like every morning when suddenly you realize..")
-console.log("IT'S OCTOBER 1st!!!!! THE RENT'S DUE")
-console.log("you were so busy thinking about crypto-anarchy articles from the 90s that you forgot rent was due today!!!!")
-console.log("You grab your rent check and your hoodie and run out the door")
-console.log("suddenly you hear 'Hey.. Where do you think YOU'RE going??")
-console.log("..it's your shitty upstairs neighbor..")
-console.log("'It's a weeknight and we're having a bunch of random people over later... Around 1am....'")
-console.log("'I'm going to need that rent money to buy booze, illicit drugs and new bass speakers for the party'")
-console.log("'Hand over the cash or I'll kick you ass!!")
+delay(3000);
+console.log("You clean up, start cooking breakfast just like every morning when suddenly you realize..");
+delay(5000);
+console.log("IT'S OCTOBER 1st!!!!! THE RENT'S DUE");
+delay(2000);
+console.log("you were so busy thinking about crypto-anarchy articles from the 90s that you forgot rent was due today!!!!");
+delay(5000);
+console.log("You grab your rent check and your hoodie and run out the door");
+delay(2500);
+console.log("suddenly you hear 'Hey.. Where do you think YOU'RE going??");
+delay(4000);
+console.log("..it's your shitty upstairs neighbor..");
+delay(2000);
+console.log("'It's a weeknight and we're having a bunch of random people over later... Around 1am....'");
+delay(5000);
+console.log("'I'm going to need that rent money to buy booze, illicit drugs and new bass speakers for the party'");
+delay(6000);
+console.log("'Hand over the cash or I'll kick you ass!!");
+delay(2000);
 
 var neighbor_switch = prompt("Type 'fight' to take him on, type 'give up' to give him your rent money and run away").toUpperCase();
 
-switch (neighbor_switch)	 
+switch (neighbor_switch){	 
 	case 'GIVE UP':
 		console.log("You hand over the cash.. That's the last of it, looks like you'll be out on the street by next week");
 		alert("GAME OVER");
 		break;
-	case 'FIGHT'
+	case 'FIGHT':
 		fight(hero, neighbor);
 		break;
-
+}
 console.log("You bound out on to the street victorious. The fresh air and sun restore your health to 100/100")
 
 
