@@ -319,3 +319,30 @@ console.log("You bound out on to the street victorious. The fresh air and sun re
 
 
 
+
+// # Reflection
+
+// -What was the most difficult part of this challenge?
+// 
+// Figuring out what the challenge was asking us to do, then probably sorting 
+// out all the syntax.
+//
+// -What did you learn about creating objects and functions that interact with one another?
+//
+// I learned that you can create objects to store states and just code a 
+// series of functions to modify them and it creates an environment.
+//
+// -Did you learn about any new built-in methods you could use in your refactored solution? If so, what were they and how do they work?
+//
+// I learned about switch and case. I also learned about Math.random and 
+// .getTime which helped me create my random numbers for attacks and my delay.
+// It was mostly forks (switches, if else statements) and keeping everything 
+// organized though.
+//
+// -How can you access and manipulate properties of objects?
+//
+// I found their path and then reassigned them if I wanted to manipulate them.
+//
+
+
+
