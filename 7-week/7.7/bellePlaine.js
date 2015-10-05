@@ -181,7 +181,7 @@ function fight(player, NPC) {
 
 
 		function turn() {
-		 	// var move = prompt("Your move!! Type 'attack' to attack or 'rest' to restore 4 energy and 25hp").toUpperCase();
+		 	var move = prompt("Your move!! Type 'attack' to attack or 'rest' to restore 4 energy and 25hp").toUpperCase();
 	
 			if(move === "ATTACK") {
 				var damage = randomNum(15, 35) + (player.energy * 2);
@@ -204,6 +204,7 @@ function fight(player, NPC) {
 		function turnNPC() {
 			if(NPC.health <= 30) {
 				console.log(NPC.name + " used REST!! They restored 25 health")
+				NPC.health = NPC.health + 25
 				delay(3000)
 			} // if 
 
@@ -225,51 +226,71 @@ function fight(player, NPC) {
 
 //				# Chapter 1-- The Apartment
 
-// print out-- "It's 8:30am on a sunny, beautiful Thursday morning in North Center, Chicago" 
-// print out-- "Bees are buzzing, children are playing and birds are chirping"
-// print out-- "..Hmm, actually these birds sound kind of funny-- Like they're almost beeping"
-// print out-- "beeeep, beeeep, beeeep"
-// print out-- "Wait.. Those aren't birds.... It's your alarm clock!!"
-// print out-- "After a long night of DBC work, you're still exausted!! Your energy is at a " + energy + " out of " + max_energy
-// snoozeResponse = prompt("Type 'snooze' to sleep another half hour and gain back 2 energy or type 'off' to turn off the alarm and get up")
-// SWITCH alarm
+console.log("It's 8:30am on a sunny, beautiful Thursday morning in North Center, Chicago")
+console.log("Bees are buzzing, children are playing and birds are chirping")
+console.log("..Hmm, actually these birds sound kind of funny-- Like they're almost beeping")
+console.log("beeeep, beeeep, beeeep")
+console.log("Wait.. Those aren't birds.... It's your alarm clock!!")
+console.log("After a long night of DBC work, you're still exausted!!") 
+// alarm()
+	
+	// alarm function (tested)
+function alarm(){
+	console.log("Your energy is at a " + hero.energy + " out of " + hero.maxEnergy)
+	snoozeResponse = prompt("Type 'snooze' to sleep another half hour and gain back 2 energy or type 'off' to turn off the alarm and get up").toUpperCase();
+	switch(snoozeResponse) {
+		case 'SNOOZE':
+			console.log("You slam your alarm (hoping you hit the snooze button) and drift back off to sleep");
+			console.log("zzzzzzz");
+			console.log("zzzzzzz");
+			console.log("zzzzzzz");
+			hero.energy = hero.energy + 2;
+			console.log("you gain +2 energy!!")
+			console.log("BEEEEP BEEEEP BEEEEP... Damn that's loud, ok now it's 9am and your energy is " + hero.energy + " out of " + hero.maxEnergy);
+	
+			if(hero.energy === hero.maxEnergy) {
+				console.log("You feel fully energized. It's time to get up!!")
+				break;
+			} //if
 
-	// Case 1: snoozeResponse === "snooze" then 
-	// print out "You slam your alarm (hoping you hit the snooze button) and drift back off to sleep"
-	// print out-- "zzzzzzz"
-	// print out-- "zzzzzzz"
-	// print out-- "zzzzzzz"
-	// var energy = energy + 2
-	// print out-- "you gain +2 energy"
-	// print out-- "BEEEEP BEEEEP BEEEEP... Damn that's loud, ok now it's 9am and your energy is " + energy + " out of " + max_energy
-		// IF energy === max_energy
-		// print out-- "It's time to get up... "
-		// end
-		// IF energy < max_energy
-		// call switch alarm again. (maybe this should be a function for recursive purposes)
-		// end
+			else if(hero.energy < hero.maxEnergy) {
+				alarm()
+			} // else if
 
-	// Case 2: snoozeResponse === "off"
-	// end
+			else {
+				hero.energy = hero.maxEnergy
+				console.log("You feel fully energized. It's time to get up!!")
+				break;
+			}; //else
 
-// print out-- "You clean up, start cooking breakfast just like every morning when suddenly you realize.."
-// print out-- "IT'S OCTOBER 1st!!!!! THE RENT'S DUE"
-// print out-- "you were so busy thinking about crypto-anarchy articles from the 90s that you forgot rent was due today!!!!"
-// print out-- "You grab your rent check and your hoodie and run out the door"
-// print out-- "suddenly you hear 'Hey.. Where do you think YOU'RE going??"
-// print out-- "..it's your shitty upstairs neighbor.."
-// print out-- "'It's a weeknight and we're having a bunch of random people over later... Around 1am....'"
-// print out-- "'I'm going to need that rent money to buy booze, illicit drugs and new bass speakers for the party'"
-// print out-- "'Hand over the cash or I'll kick you ass!!"
-// var neighbor_switch = prompt("Type 'fight' to take him on, type 'give up' to give him your rent money and run away)
-	// Case 1: give up
-	// print out-- "You hand over the cash.. That's the last of it, looks like you'll be out on the street by next week"
-	// print out-- "GAME OVER"
+		case 'OFF':
+		break;
+		
+	} //switch
+} //function alarm
 
-	// Case 2: fight
-	// call fight function 
+console.log("You clean up, start cooking breakfast just like every morning when suddenly you realize..")
+console.log("IT'S OCTOBER 1st!!!!! THE RENT'S DUE")
+console.log("you were so busy thinking about crypto-anarchy articles from the 90s that you forgot rent was due today!!!!")
+console.log("You grab your rent check and your hoodie and run out the door")
+console.log("suddenly you hear 'Hey.. Where do you think YOU'RE going??")
+console.log("..it's your shitty upstairs neighbor..")
+console.log("'It's a weeknight and we're having a bunch of random people over later... Around 1am....'")
+console.log("'I'm going to need that rent money to buy booze, illicit drugs and new bass speakers for the party'")
+console.log("'Hand over the cash or I'll kick you ass!!")
 
-// print out-- "You bound out on to the street victorious. The fresh air and sun restore your health to 100/100"
+var neighbor_switch = prompt("Type 'fight' to take him on, type 'give up' to give him your rent money and run away").toUpperCase();
+
+switch (neighbor_switch)	 
+	case 'GIVE UP':
+		console.log("You hand over the cash.. That's the last of it, looks like you'll be out on the street by next week");
+		alert("GAME OVER");
+		break;
+	case 'FIGHT'
+		fight(hero, neighbor);
+		break;
+
+console.log("You bound out on to the street victorious. The fresh air and sun restore your health to 100/100")
 
 
 
