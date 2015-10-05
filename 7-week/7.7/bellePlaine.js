@@ -114,6 +114,7 @@
 // var name = prompt("what's your name?")
 // var start = alert("Ok, " + name + " let's play 'Belle Plaine'!!")
 
+
 	// hero stats (tested)
 
 var hero = {
@@ -126,6 +127,7 @@ energy: 8,
 maxEnergy: 10
 }; //119
 
+
 	// NPC Neighbor stats (tested)
 
 var neighbor = {
@@ -135,69 +137,74 @@ health: 85,
 maxHealth: 85
 }; // 131
 
-	// delay inbetween text (tested)
 
-// function delay(timeInMilliseconds){ setTimeout(function(){
-// 	console.log("...")
-// }, timeInMilliseconds)
-// };
+	// delay function (tested)
 
-	// delay function
-function delay(timeInMilliseconds){ 
-	setTimeout(console.log("..."), timeInMilliseconds);
+function delay(ms) {
+   ms += new Date().getTime();
+   console.log("...")
+   while (new Date() < ms);
 };
-
-delay(1000)
 
 
 	// Random Number Generator (tested)
 
 function randomNum(min, max) { 
 	return Math.floor(Math.random() * (max - min + 1)) + min
-}
+};
 
  	// fight function
 function fight(player, NPC) {
 
 	console.log("It's on!! Quick, make the first move!!");
 
-	// while (player.health !== 0 && NPC.health !== 0) {
-	// 	console.log("Current stats:");
-	// 	console.log(player.name + " health-> " + player.health + "/" + player.maxHealth);
-	// 	console.log(player.name + " energy-> " + player.energy + "/" + player.maxEnergy);
-	// 	console.log(NPC.name + " health-> " + NPC.health + "/" + NPC.maxHealth);
+	var ready = alert("The fight is about to begin, hit 'ok' when you're ready")
 
-	// 	var move = prompt("Type 'attack' to attack or 'rest' to restore 4 energy and 25hp").toUpperCase();
-	var move = "ATTACK"
-		if(move === "ATTACK") {
-			var damage = randomNum(15, 35) + (player.energy * 2);
-			console.log("You hit " + NPC.name + " for " + damage + "!!");
-			NPC.health = NPC.health - damage;
-		} //if
+	while (player.health !== 0 && NPC.health !== 0) {
+		console.log("Current stats:");
+		console.log(player.name + " health-> " + player.health + "/" + player.maxHealth);
+		console.log(player.name + " energy-> " + player.energy + "/" + player.maxEnergy);
+		console.log(NPC.name + " health-> " + NPC.health + "/" + NPC.maxHealth);
+		delay(5000)
+		if(player.health > 0) {break;}
+		turn()
+		if(NPC.health > 0) {break;}
 
-		else if(move === "REST"){
-			player.energy = player.energy + 4;
-			player.health = player.health + 25;
-			console.log("You gain 4 energy and 25 health, but deal no damage!!")
-		} // else if
 
-	// } // while ln 146
+		function turn() {
+		 	// var move = prompt("Your move!! Type 'attack' to attack or 'rest' to restore 4 energy and 25hp").toUpperCase();
+	
+			if(move === "ATTACK") {
+				var damage = randomNum(15, 35) + (player.energy * 2);
+				console.log("You hit " + NPC.name + " for " + damage + "!!");
+				NPC.health = NPC.health - damage;
+			} //if
+
+			else if(move === "REST"){
+				player.energy = player.energy + 4;
+				player.health = player.health + 25;
+				console.log("You gain 4 energy and 25 health, but deal no damage!!")
+			} // else if
+
+			else {
+				// alert("Please input a valid command")
+				turn()
+			} //else
+		} //turn
+
+		function turnNPC() {
+			if(NPC.health <= 30) {
+				console.log(NPC.name + " used REST")
+				delay(3000)
+				
+			} // if 
+		} //function ln 194
+	} // while ln 146
 
 } // function ln145
 
+// fight(hero, neighbor)
 
-
-// 2.1: turns
-// 		-Attack
-// 			costs 2 energy
-// 			damage = energy + random between 15-45
-// 		-Rest
-//			restore 4 energy, 25 health
-//			no damage done
-//		-Defend
-//			restore 4 energy
-//			no damage done
-//			next attack deals attack/2 damage to you
 
 
 
