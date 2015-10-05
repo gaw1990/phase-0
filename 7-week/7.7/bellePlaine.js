@@ -116,23 +116,24 @@
 
 	// hero stats (tested)
 
-// var hero = {
-// name: "george",
+var hero = {
+name: "george",
 
-// health: 100,
-// maxHealth: 100,
+health: 100,
+maxHealth: 100,
 
-// energy: 8,
-// maxEnergy: 10
-// }; //120
+energy: 8,
+maxEnergy: 10
+}; //119
 
 	// NPC Neighbor stats (tested)
 
-// var neighbor = {
-// name: "Mike",
-// health: 85,
-// maxHealth: 85
-// };
+var neighbor = {
+name: "Mike",
+
+health: 85,
+maxHealth: 85
+}; // 131
 
 	// delay inbetween text (tested)
 
@@ -141,37 +142,50 @@
 // }, timeInMilliseconds)
 // };
 
+	// delay function
+function delay(timeInMilliseconds){ 
+	setTimeout(console.log("..."), timeInMilliseconds);
+};
+
+delay(1000)
+
+
 	// Random Number Generator (tested)
 
-// function randomNum(min, max) { 
-// 	return Math.floor(Math.random() * (max - min + 1)) + min
-// }
+function randomNum(min, max) { 
+	return Math.floor(Math.random() * (max - min + 1)) + min
+}
 
  	// fight function
 function fight(player, NPC) {
 
-	console.log("It's on!! Quick, make the first move!!")
+	console.log("It's on!! Quick, make the first move!!");
 
-	while (player.health !== 0 && NPC.health !== 0) {
-		console.log("Current stats:")
-		console.log(player.name + " health-> " + player.health + "/" + player.maxHealth)
-		console.log(player.name + " energy-> " + player.energy + "/" + player.maxEnergy)
-		console.log(NPC.name + " health-> " + NPC.health + "/" + NPC.maxHealth)
+	// while (player.health !== 0 && NPC.health !== 0) {
+	// 	console.log("Current stats:");
+	// 	console.log(player.name + " health-> " + player.health + "/" + player.maxHealth);
+	// 	console.log(player.name + " energy-> " + player.energy + "/" + player.maxEnergy);
+	// 	console.log(NPC.name + " health-> " + NPC.health + "/" + NPC.maxHealth);
 
-		var move = prompt("Type 'attack' to attack or 'rest' to restore 4 energy and 25hp").toUpperCase();
-
+	// 	var move = prompt("Type 'attack' to attack or 'rest' to restore 4 energy and 25hp").toUpperCase();
+	var move = "ATTACK"
 		if(move === "ATTACK") {
-			randomNum(15)
+			var damage = randomNum(15, 35) + (player.energy * 2);
+			console.log("You hit " + NPC.name + " for " + damage + "!!");
+			NPC.health = NPC.health - damage;
 		} //if
 
 		else if(move === "REST"){
-
+			player.energy = player.energy + 4;
+			player.health = player.health + 25;
+			console.log("You gain 4 energy and 25 health, but deal no damage!!")
 		} // else if
 
-
-} // while ln 146
+	// } // while ln 146
 
 } // function ln145
+
+
 
 // 2.1: turns
 // 		-Attack
