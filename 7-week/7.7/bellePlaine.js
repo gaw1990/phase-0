@@ -131,7 +131,7 @@ maxEnergy: 10
 	// NPC Neighbor stats (tested)
 
 var neighbor = {
-name: "Mike",
+name: "upstairs neighbor",
 
 health: 85,
 maxHealth: 85
@@ -147,13 +147,14 @@ function delay(ms) {
 };
 
 
-	// Random Number Generator (tested)
+	// RNG function (tested)
 
 function randomNum(min, max) { 
 	return Math.floor(Math.random() * (max - min + 1)) + min
 };
 
  	// fight function
+
 function fight(player, NPC) {
 
 	console.log("It's on!! Quick, make the first move!!");
@@ -161,14 +162,22 @@ function fight(player, NPC) {
 	var ready = alert("The fight is about to begin, hit 'ok' when you're ready")
 
 	while (player.health !== 0 && NPC.health !== 0) {
-		console.log("Current stats:");
-		console.log(player.name + " health-> " + player.health + "/" + player.maxHealth);
-		console.log(player.name + " energy-> " + player.energy + "/" + player.maxEnergy);
-		console.log(NPC.name + " health-> " + NPC.health + "/" + NPC.maxHealth);
+		stats()
 		delay(5000)
-		if(player.health > 0) {break;}
+		if(player.health <= 0) {break;}
 		turn()
-		if(NPC.health > 0) {break;}
+		stats()
+		delay(5000)
+		if(NPC.health <= 0) {break;}
+		turnNPC()
+		delay(5000)
+
+		function stats() {
+			console.log("Current stats:");
+			console.log(player.name + " health-> " + player.health + "/" + player.maxHealth);
+			console.log(player.name + " energy-> " + player.energy + "/" + player.maxEnergy);
+			console.log(NPC.name + " health-> " + NPC.health + "/" + NPC.maxHealth);
+		} //stats
 
 
 		function turn() {
@@ -194,16 +203,22 @@ function fight(player, NPC) {
 
 		function turnNPC() {
 			if(NPC.health <= 30) {
-				console.log(NPC.name + " used REST")
+				console.log(NPC.name + " used REST!! They restored 25 health")
 				delay(3000)
-				
 			} // if 
+
+			else {
+				var damageNPC = randomNum(15, 35) + (player.energy * 2);
+				console.log(NPC.name + " used attack!! He hits" + player.name + " for " + damageNPC + "!!");
+				player.health = player.health - damageNPC;
+			} //else
+
 		} //function ln 194
 	} // while ln 146
 
 } // function ln145
 
-// fight(hero, neighbor)
+
 
 
 
