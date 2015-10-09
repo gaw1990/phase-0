@@ -41,7 +41,7 @@
 
 	SELECT * FROM regions JOIN states ON regions.id = states.region_id;
 
-![linked outfit tables](connected-table.png)
+![linked outfit tables](connected-tables.png)
 
 
 
