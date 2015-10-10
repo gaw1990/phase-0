@@ -146,8 +146,24 @@ end
 
 # Reflection
 
-# Here's a short, unwarranted reflection: This is fun! If I had more time I'd
-# clean it up to handle any number!
+# -What concepts did you review or learn in this challenge?
+
+# I reviewed conditional statements, variable scope and general ruby syntax. 
+
+
+# -What is still confusing to you about Ruby?
+
+# I wasn't sure if I could use a variable to create new variables (ie. having 
+# a counter variable and calling another in a loop digit(counter) then defining
+# it. I need to ask a person about that and I probably will soon.
+
+
+# -What are you going to study to get more prepared for Phase 1?
+
+# I'm definitely going to re-read some parts of Chris Pine, becuase I'm a 
+# little iffy on classes. Also I've just forgotten a bit of ruby. I'm probably
+# also going to go indepth into JS and HTML, hopefully I can find something 
+# that combines the two in excersices.
 
 
 
