@@ -4,12 +4,12 @@ Release 2:
 
 Because there will only ever be one highest_priority_challenge value for every one student. Either that or highest_priority_challenge will be a null value.
 
-![one-to-one](/imgs/one_to_one.png)
+![one-to-one](imgs/one_to_one.png)
 
 
 Release 4:
 
-![one-to-many](/imgs/one_to_many.png)
+![one-to-many](imgs/one_to_many.png)
 
 
 	---REFLECTION---
