@@ -70,7 +70,42 @@ var officers = {
 
 // __________________________________________
 // Initial Solution
+// function  countVote() {
 
+// for(var students in votes) {
+//   if(votes.hasOwnProperty(students)) {
+//     for (var position in votes[students]) {
+//       if (voteCount[position].hasOwnProperty(votes[students][position])) {
+//         voteCount[position][votes[students][position]]++;
+//       }
+//       else {
+//         voteCount[position][votes[students][position]] = 1;
+//       }
+//     }
+//   }
+// }
+// };
+
+// countVote();
+// console.log(voteCount);
+
+
+// function winner () {
+//   for (var position in voteCount) {
+//   var counter = 0;
+//   var winner;
+//     for (var candidates in voteCount[position]) {
+//       if (voteCount[position][candidates] > counter) {
+//         counter = voteCount[position][candidates];
+//         winner = candidates;
+//       }
+//   }
+//   officers[position] = winner;
+//   }
+// }
+
+// winner();
+// console.log(officers);
 
 
 
@@ -79,19 +114,66 @@ var officers = {
 // Refactored Solution
 
 
+function  countVote() {
+
+  for(var students in votes) { // acessing the first level of the votes object
+    for(var position in votes[students]) { //then call what's inside votes[students] position
+      if(voteCount[position].hasOwnProperty(votes[students][position])) { //if votes[students][position] exists
+       voteCount[position][votes[students][position]]++; //increment the corresponding object in voteCount by 1
+      } //if
+      else {
+         voteCount[position][votes[students][position]] = 1; // else if it doesn't yet exist assign it a value of 1
+      } //else
+    } //for
+  } //for
+}; //function
+
+countVote(); //runs countVote
 
 
+function winner() {
+
+  for (var position in voteCount) {
+    var counter = 0;
+    var winner;
+    for (var candidates in voteCount[position]) {
+      if (voteCount[position][candidates] > counter) {
+        counter = voteCount[position][candidates];
+        winner = candidates;
+      } //if
+    } //for
+    officers[position] = winner;
+  } //for
+}; //function
+
+winner();
+
+console.log(officers)
 
 
-// __________________________________________
+/* ________________________________________
 // Reflection
 
+-What did you learn about iterating over nested objects in JavaScript?
+
+I learned (painstakingly) about how to refer to nested objects in JS using 
+for..in.. and bracket notation. 
+
+-Were you able to find useful methods to help you with this?
+
+For..in.. was needed pretty much throughout the challenge-- We also used 
+.hasOwnProperty, which I didn't completely understand the usefulness of in 
+this situation, but by the time we put it in the code, I was too afraid to 
+break it to take out .hasOwnProperty. 
+
+-What concepts were solidified in the process of working through this challenge?
+
+JS syntax, using brackets and keeping them organized, nested objects are still 
+a little iffy for me, but it's something I'm going to work on between now and 
+phase 1.
 
 
-
-
-
-// __________________________________________
+*/ // __________________________________________
 // Test Code:  Do not alter code below this line.
 
 
