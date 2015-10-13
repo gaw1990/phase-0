@@ -91,3 +91,10 @@ puts "Now you have #{super_mario.pez_count} pez!"
 
 
 # Reflection
+#
+# No new methods here, it was all pretty simple class mechanics. I'll have to 
+# mess around with classes a little more in the future to get more comfortable
+# but this challenge was simple.
+
+
+
