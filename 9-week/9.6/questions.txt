@@ -1,0 +1,45 @@
+
+-Has this question been asked before?
+
+-Walk through your thought process in the question
+	-this helps others reproduce the problem both in their head
+	and in their code (irb, node ect..)
+
+-Specificity of title and question
+	- 
+-proofread 
+
+
+Some things I'm guilty of:
+
+-Asking questions that are more like complaints with question marks 
+
+-Asking questions I'm just too lazy to figure out myself
+
+I did a little research and I'm going to try to work on the following things:
+
+1. First of all, before asking a question, I'm going to see if a question has been asked before. 
+
+	- So often I will stumble upon problems, and my first instinct is to think 
+	that I'm the first person ever to encounter said problem. So before I ask 
+	a question, I'm going to google it, search stack-overflow and really make sure
+	that the answer isn't already out there. 
+
+2. I think it's helpful when writing out a question, or thinking about how to phrase it, 
+to walk through the steps that proceeded the issue. 
+	-Often just by re-walking through the steps you'll find the solution. 
+	-Also writing out what lead up to your problem will make it much easier 
+	for someone else to see where you went wrong. 
+
+3. Be specific-- "how does Ruby work?" "what is .map?"-- These questions have very complex 
+answers.
+	-By getting down to exactly where you're stuck-- It makes the question easier to answer.
+	-You may also find your answer in the process of narrowing down your question.
+
+4. Proofread
+	-Think about it like refactoring your question. Reread it and take out parts that aren't needed,
+	that are repetitive ect. This will make it easier to answer. 
+
+Final thoughts: Don't be afraid to ask questions. It's ok to be wrong, it's ok to ask badly worded
+poorly thought out questions. That's how you learn to ask good questions after all.
+
